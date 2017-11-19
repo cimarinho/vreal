@@ -1,0 +1,179 @@
+{
+	"id": "40d9945f-4ef0-74f5-341a-ae141e79ab90",
+	"name": "vreal",
+	"description": "",
+	"order": [
+		"394c62fd-4e43-efc1-df88-9ec036d329ba",
+		"7cf57bb9-3690-f217-0e7b-9f560a843708",
+		"119f5418-5810-a9c1-f885-d2efa117f77b"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1511001262126,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "119f5418-5810-a9c1-f885-d2efa117f77b",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/properties",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"response code is 401\"] = responseCode.code === 401;\ntests[\"response has WWW-Authenticate header\"] = (postman.getResponseHeader('WWW-Authenticate'));\n\nvar authenticateHeader = postman.getResponseHeader('WWW-Authenticate'),\n    realmStart = authenticateHeader.indexOf('\"',authenticateHeader.indexOf(\"realm\")) + 1 ,\n    realmEnd = authenticateHeader.indexOf('\"',realmStart),\n    realm = authenticateHeader.slice(realmStart,realmEnd),\n    nonceStart = authenticateHeader.indexOf('\"',authenticateHeader.indexOf(\"nonce\")) + 1,\n    nonceEnd = authenticateHeader.indexOf('\"',nonceStart),\n    nonce = authenticateHeader.slice(nonceStart,nonceEnd);\n    \npostman.setGlobalVariable('echo_digest_realm', realm);\npostman.setGlobalVariable('echo_digest_nonce', nonce);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1511083830182,
+			"name": "vreal",
+			"description": "",
+			"collectionId": "40d9945f-4ef0-74f5-341a-ae141e79ab90",
+			"responses": [],
+			"rawModeData": "{  \n   \"x\":601,\n   \"y\":501,\n   \"title\":\"Imóvel código 639, com 2 quartos e 1 banheiros.\",\n   \"price\":212121,\n   \"description\":\"Mollit exercitation eiusmod deserunt occaecat id deserunt nisi minim cillum mollit. Tempor cillum deserunt nisi mollit dolore est ex.\",\n   \"beds\":2,\n   \"baths\":1,\n   \"squareMeters\":40\n}"
+		},
+		{
+			"id": "394c62fd-4e43-efc1-df88-9ec036d329ba",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/properties/1",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [
+				{
+					"key": "code",
+					"value": "xWnkliVQJURqB2x1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "grant_type",
+					"value": "authorization_code",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "redirect_uri",
+					"value": "https://www.getpostman.com/oauth2/callback",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_id",
+					"value": "abc123",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "ssh-secret",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "tests[\"response code is 401\"] = responseCode.code === 401;\ntests[\"response has WWW-Authenticate header\"] = (postman.getResponseHeader('WWW-Authenticate'));\n\nvar authenticateHeader = postman.getResponseHeader('WWW-Authenticate'),\n    realmStart = authenticateHeader.indexOf('\"',authenticateHeader.indexOf(\"realm\")) + 1 ,\n    realmEnd = authenticateHeader.indexOf('\"',realmStart),\n    realm = authenticateHeader.slice(realmStart,realmEnd),\n    nonceStart = authenticateHeader.indexOf('\"',authenticateHeader.indexOf(\"nonce\")) + 1,\n    nonceEnd = authenticateHeader.indexOf('\"',nonceStart),\n    nonce = authenticateHeader.slice(nonceStart,nonceEnd);\n    \npostman.setGlobalVariable('echo_digest_realm', realm);\npostman.setGlobalVariable('echo_digest_nonce', nonce);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1511001539985,
+			"name": "vreal_id",
+			"description": "",
+			"collectionId": "40d9945f-4ef0-74f5-341a-ae141e79ab90",
+			"responses": []
+		},
+		{
+			"id": "7cf57bb9-3690-f217-0e7b-9f560a843708",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/properties?ax=600&ay=1000&bx=1400&by=0",
+			"queryParams": [
+				{
+					"key": "ax",
+					"value": "600",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "ay",
+					"value": "1000",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "bx",
+					"value": "1400",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "by",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [
+				{
+					"key": "code",
+					"value": "xWnkliVQJURqB2x1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "grant_type",
+					"value": "authorization_code",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "redirect_uri",
+					"value": "https://www.getpostman.com/oauth2/callback",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_id",
+					"value": "abc123",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "ssh-secret",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": "tests[\"response code is 401\"] = responseCode.code === 401;\ntests[\"response has WWW-Authenticate header\"] = (postman.getResponseHeader('WWW-Authenticate'));\n\nvar authenticateHeader = postman.getResponseHeader('WWW-Authenticate'),\n    realmStart = authenticateHeader.indexOf('\"',authenticateHeader.indexOf(\"realm\")) + 1 ,\n    realmEnd = authenticateHeader.indexOf('\"',realmStart),\n    realm = authenticateHeader.slice(realmStart,realmEnd),\n    nonceStart = authenticateHeader.indexOf('\"',authenticateHeader.indexOf(\"nonce\")) + 1,\n    nonceEnd = authenticateHeader.indexOf('\"',nonceStart),\n    nonce = authenticateHeader.slice(nonceStart,nonceEnd);\n    \npostman.setGlobalVariable('echo_digest_realm', realm);\npostman.setGlobalVariable('echo_digest_nonce', nonce);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1511083984481,
+			"name": "vreal_params",
+			"description": "",
+			"collectionId": "40d9945f-4ef0-74f5-341a-ae141e79ab90",
+			"responses": []
+		}
+	]
+}

@@ -1,0 +1,5 @@
+br/com/test/vreal/controller/PropertyControllerTest.class
+br/com/test/vreal/service/PropertyServiceTest.class
+br/com/test/vreal/repository/PropertyRepositoryTest.class
+br/com/test/vreal/VRealApplicationTests.class
+br/com/test/vreal/repository/ProvinceRepositoryTest.class

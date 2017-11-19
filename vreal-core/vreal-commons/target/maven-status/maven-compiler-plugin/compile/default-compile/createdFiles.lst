@@ -1,0 +1,6 @@
+br/com/test/vreal/utils/ValidationErrors.class
+br/com/test/vreal/utils/NumberComparator$NumberConverter.class
+br/com/test/vreal/exception/BadRequestException.class
+br/com/test/vreal/exception/ExceptionHandlingController.class
+br/com/test/vreal/exception/UnprocessableEntityException.class
+br/com/test/vreal/utils/NumberComparator.class

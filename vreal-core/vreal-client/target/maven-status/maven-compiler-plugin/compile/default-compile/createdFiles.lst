@@ -1,0 +1,10 @@
+br/com/test/vreal/domain/ExceptionResponse.class
+br/com/test/vreal/domain/Property$PropertyBuilder.class
+br/com/test/vreal/domain/Province$1.class
+br/com/test/vreal/domain/Province$ProvinceBuilder.class
+br/com/test/vreal/domain/Property$1.class
+br/com/test/vreal/domain/Boundaries.class
+br/com/test/vreal/domain/Boundary.class
+br/com/test/vreal/domain/Properties.class
+br/com/test/vreal/domain/Province.class
+br/com/test/vreal/domain/Property.class
