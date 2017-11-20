@@ -1,4 +1,4 @@
-Test Walmart
+Test 
 
 1) Pré-requisito para execução
 
@@ -19,7 +19,7 @@ Test Walmart
     	mvn clean install.
     	Considerando uma maquina linux.
     	Abrir  um terminal e dentro do diretório{home}/vreal/vreal-core executar sudo docker-compose up 
-    	Apos subir vm acima abrir outro terminal no mesmo diretório acima e executar  mvn spring-boot:run
+    	Apos subir vm, abrir outro terminal no mesmo diretório acima e executar  mvn spring-boot:run
 
 3) Test Integrado.
 
