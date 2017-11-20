@@ -5,11 +5,11 @@ Test
    	Apache-maven instalado e configurado.
    	Java versão 1.8 instalado e configurado.
    	Docker e docker-compose instalado (https://docs.docker.com/compose/install/)
-   	Se for subir o projeto no Eclipse deve ser configurado o lombox.
-   		a) Download do https://projectlombok.org/download.html.
-   		b) Rodar o comando java -jar lombox.jar(nome do jar baixado).
-   		c) Especificar a pasta do eclipse e clicar botão install / update.
-   	Se for subir no Intelig, instalar o plugin na aba File/Settings 
+   	Se for subir o projeto no Eclipse deve ser configurado o lombox.<br>
+   		a) Download do https://projectlombok.org/download.html. <br>
+   		b) Rodar o comando java -jar lombox.jar (nome do jar baixado) . <br>
+   		c) Especificar a pasta do eclipse e clicar botão install / update .<br>
+   	Se for subir no Intelig, instalar o plugin na aba File/Settings <br>
    		a) Plugins.
    		b) lombox botão install.
 
