@@ -25,10 +25,10 @@ Test
 
 	Após execução da etapa 2, entrar no diretório{home}/vreal/vreal-integration-test e executar o comando: mvn test -Dapp.host=http://{IP}
 
-4) Test.
-    a) Dentro do diretório{home}/vreal
-	curl -XPOST http://${IP}:8080/properties -d @request.json --header 'Content-Type:application/json' -vvv
-	curl http://${IP}:8080/properties/1
-	curl http://${IP}:8080/properties\?ax\=600\&ay\=500\&bx\=1400\&by\=499
+4) Test.<br>
+    a) Dentro do diretório{home}/vreal<br>
+	curl -XPOST http://${IP}:8080/properties -d @request.json --header 'Content-Type:application/json' -vvv<br>
+	curl http://${IP}:8080/properties/1<br>
+	curl http://${IP}:8080/properties\?ax\=600\&ay\=500\&bx\=1400\&by\=499<br>
 	
     b) Ou importar o arquivo vreal.postman_collection.json no Postman.
