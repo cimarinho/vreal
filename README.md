@@ -23,7 +23,7 @@ Test
 
 3) Test Integrado.
 
-	Após execução da etapa 2, entrar no diretório{home}/vreal/vreal-integration-test e executar o comando: mvn test -Dapp.host=http://{IP}
+	Após execução da etapa 2, entrar no diretório{home}/vreal/vreal-integration-test e executar o comando: mvn surefire:test -Dtest=*.java -Dapp.host=http://{IP}
 
 4) Test.<br>
     a) Dentro do diretório{home}/vreal<br>
