@@ -23,11 +23,23 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <unit-tests.skip>false</unit-tests.skip>
+        <integration-tests.skip>true</integration-tests.skip>
     </properties>
 
     <name>Project Test VReal</name>
     <description>Test</description>
 
+    <profiles>
+        <profile>
+            <id>vreal-integration-test</id>
+            <properties>
+                <unit-tests.skip>false</unit-tests.skip>
+                <js-tests.skip>false</js-tests.skip>
+                <integration-tests.skip>false</integration-tests.skip>
+            </properties>
+        </profile>
+    </profiles>
 
     <build>
         <finalName>vreal</finalName>
@@ -43,6 +55,35 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5.2</version>
             </plugin>
+
+
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>${unit-tests.skip}</skipTests>
+                    <excludes>
+                        <exclude>**/*IT.java</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>vreal-integration-test</id>
+                        <goals>
+                            <goal>integration-test</goal>
+                        </goals>
+                        <configuration>
+                            <skipTests>${integration-tests.skip}</skipTests>
+                            <includes>
+                                <include>**/*IT.class</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 

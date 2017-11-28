@@ -1,4 +1,4 @@
-package br.com.test.vreal.controller;
+package br.com.test.vreal.controller.test;
 
 
 public class Endpoints {

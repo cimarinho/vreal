@@ -1,6 +1,6 @@
-package br.com.test.vreal.controller;
+package br.com.test.vreal.controller.test;
 
-import br.com.test.vreal.controller.util.AppConfig;
+import br.com.test.vreal.controller.test.util.AppConfig;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.path.json.JsonPath;
 import org.apache.http.HttpStatus;
@@ -12,7 +12,7 @@ import org.junit.runners.MethodSorters;
 import static com.jayway.restassured.RestAssured.given;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class PropertyControllerTestIT {
+public class PropertyController {
 
     private String JSON = "application/json; charset=utf-8";
     String URI = "/properties";

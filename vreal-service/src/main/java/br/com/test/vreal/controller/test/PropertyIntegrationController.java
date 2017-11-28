@@ -1,4 +1,4 @@
-package br.com.test.vreal.controller;
+package br.com.test.vreal.controller.test;
 
 import br.com.test.vreal.domain.Property;
 import br.com.test.vreal.service.PropertyService;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import static br.com.test.vreal.controller.Endpoints.ROOT;
+import static br.com.test.vreal.controller.test.Endpoints.ROOT;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @RestController
