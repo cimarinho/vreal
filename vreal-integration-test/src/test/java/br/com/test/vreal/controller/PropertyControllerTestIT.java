@@ -12,7 +12,7 @@ import org.junit.runners.MethodSorters;
 import static com.jayway.restassured.RestAssured.given;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class PropertyControllerITTest {
+public class PropertyControllerTestIT {
 
     private String JSON = "application/json; charset=utf-8";
     String URI = "/properties";
