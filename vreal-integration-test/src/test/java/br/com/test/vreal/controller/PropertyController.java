@@ -1,6 +1,6 @@
-package br.com.test.vreal.controller.test;
+package br.com.test.vreal.controller;
 
-import br.com.test.vreal.controller.test.util.AppConfig;
+import br.com.test.vreal.controller.util.AppConfig;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.path.json.JsonPath;
 import org.apache.http.HttpStatus;

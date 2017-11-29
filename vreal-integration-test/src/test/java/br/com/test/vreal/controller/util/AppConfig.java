@@ -1,4 +1,4 @@
-package br.com.test.vreal.controller.test.util;
+package br.com.test.vreal.controller.util;
 
 import static java.lang.System.getProperty;
 

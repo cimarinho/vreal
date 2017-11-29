@@ -1,4 +1,4 @@
-package br.com.test.vreal.controller.test;
+package br.com.test.vreal.controller;
 
 import br.com.test.vreal.domain.Property;
 import br.com.test.vreal.service.PropertyService;
@@ -8,12 +8,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import static br.com.test.vreal.controller.test.Endpoints.ROOT;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @RestController
 @Slf4j
-@RequestMapping(ROOT)
+@RequestMapping(Endpoints.ROOT)
 public class PropertyIntegrationController {
 
     @Autowired

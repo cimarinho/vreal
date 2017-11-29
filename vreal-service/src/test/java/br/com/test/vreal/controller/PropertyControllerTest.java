@@ -1,4 +1,4 @@
-package br.com.test.vreal.controller.test;
+package br.com.test.vreal.controller;
 
 import br.com.test.vreal.VRealApplication;
 import br.com.test.vreal.repository.ProvinceRepository;
